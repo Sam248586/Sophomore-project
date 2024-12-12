@@ -1,0 +1,445 @@
+/* App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.App, .header, .nav, .separator, div, a {
+  transition: all 0.5s ease-out;
+}
+
+/* Base App Styles */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 20px;
+  background-color: #b9e1f0; /* White background */
+  color: #000000;            /* Black text */
+}
+
+/* Dark Theme */
+.App.dark {
+  background-color: #121520; /* Blue background */
+  color: white;              /* White text */
+}
+
+/* Header */
+.header {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.App.dark .header {
+  background-color: #333333;
+}
+
+/* Navigation Bar */
+nav {
+  text-align: center;
+  width: 100%; /* Makes the navigation bar span the full width of the Header box */
+  border-radius: 10px;
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); Add shadow for depth */
+  padding: 10px 0;
+  background-color: #CFCFCF; /* Light grey background */
+  display: flex;
+  align-items: center;
+}
+
+.App.dark nav {
+  background-color: #222222; /* Slightly darker blue for contrast */
+}
+
+/* Navigation Bar Separator */
+.separator {
+  color: #666666;
+}
+
+.App.dark .separator {
+  color: #333333;
+}
+
+/* Navigation Bar Links */
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  font-family: "Anton";
+  font-size: 20px;
+  /* font-weight: bold; */
+  color: #333333;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #000000; /* Lighter hover effect */
+}
+
+.App.dark nav a {
+  color: #dfdfdf; /* White text */
+}
+
+.App.dark nav a:hover {
+  color: #ffffff;
+}
+
+/* Generic Links */
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.App.dark a {
+  color: #66b2ff;
+}
+
+.App.dark a:hover {
+  color: #3399ff;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Anton";
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.workout-item h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Workout Library Styles */
+.workout-library {
+  background-color: #ffffff; /* Matches light theme */
+  color: #000000;
+  padding: 20px 20px 5px 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.App.dark .workout-library {
+  background-color: #333333; /* Dark theme background */
+  color: white;
+}
+
+.workout-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.workout-item {
+  margin: 15px 0 0 0;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light background for each item */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* -----
+NOTE: ANYTHING BELOW THIS POINT HAS NOT BEEN ALTERED BY THE 'ui-overhaul' BRANCH
+----- */
+
+
+
+.App.dark .workout-item {
+  background-color: #444444;
+  color: white;
+}
+
+.workout-item p {
+  margin: 5px 0;
+}
+
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ... other styles ... */
+
+/* Form Styling */
+form {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ffffff; /* White background */
+  color: #000000;            /* Black text */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adding a light shadow for depth */
+  max-width: 400px; /* To control the form width */
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn’t affect width */
+  margin: 0 auto; /* Center the form within its container */
+}
+
+/* Adjust form styles for Dark Theme */
+.App.dark form {
+  background-color: #333333; /* Dark background */
+  color: white;              /* White text */
+}
+
+/* Input fields */
+input, select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%; /* Full width of the form */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  font-size: 16px;
+}
+
+/* Adjust input fields for Dark Theme */
+.App.dark input,
+.App.dark select {
+  background-color: #444444; /* Darker input background */
+  color: white;              /* White text */
+  border: 1px solid #555555; /* Darker border */
+}
+
+input:focus, select:focus {
+  border-color: #1100ff; /* Blue outline when focused */
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745; /* Green button */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Full width button */
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Adjust buttons for Dark Theme */
+.App.dark button {
+  background-color: #0062cc; /* Blue button */
+}
+
+.App.dark button:hover {
+  background-color: #004085; /* Darker blue on hover */
+}
+
+/* Favorite Workouts */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* Settings Page */
+.settings-page {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  color: #000000;            /* Black text */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust settings page for Dark Theme */
+.App.dark .settings-page {
+  background-color: #333333; /* Dark background */
+  color: white;              /* White text */
+}
+
+.settings-option {
+  margin-bottom: 20px;
+}
+
+.settings-option label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.settings-option select,
+.settings-option input[type="checkbox"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Adjust settings inputs for Dark Theme */
+.App.dark .settings-option select,
+.App.dark .settings-option input[type="checkbox"] {
+  background-color: #444444;
+  color: white;
+  border: 1px solid #555555;
+}
+
+.save-button {
+  background-color: #007bff; /* Blue Save Button */
+  width: 100%;
+}
+
+.save-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Adjust Save Button for Dark Theme */
+.App.dark .save-button {
+  background-color: #0062cc;
+}
+
+.App.dark .save-button:hover {
+  background-color: #004085;
+}
+
+/* WorkoutTracker Styles */
+.workout-tracker {
+  background-color: #ffffff; /* White background */
+  color: #000000;            /* Black text */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust WorkoutTracker for Dark Theme */
+.App.dark .workout-tracker {
+  background-color: #333333;
+  color: white;
+}
+
+/* WorkoutPlanner Styles */
+.workout-planner {
+  background-color: #ffffff; /* White background */
+  color: #000000;            /* Black text */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust WorkoutPlanner for Dark Theme */
+.App.dark .workout-planner {
+  background-color: #333333;
+  color: white;
+}
+
+/* Favorites Page Styles */
+.favorites-page {
+  background-color: #ffffff; /* White background */
+  color: #000000;            /* Black text */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust Favorites Page for Dark Theme */
+.App.dark .favorites-page {
+  background-color: #333333;
+  color: white;
+}
+
+/* Table Styles (if any) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Adjust table for Dark Theme */
+.App.dark table {
+  border-color: #555555;
+}
+
+.App.dark th,
+.App.dark td {
+  border-color: #555555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav a {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+
+  form, .settings-page, .workout-tracker, .workout-planner, .favorites-page, .workout-library {
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  
+}
+/* Workout Library Search Bar */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.App.dark .search-bar {
+  background-color: #444444;
+  color: white;
+  border: 1px solid #555555;
+}
+/* Workout Library Item Styling */
+.workout-item p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+/* App.css */

@@ -1,0 +1,14 @@
+/* Header.css */
+.header-logo {
+    width: 500px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .header {
+    /* Your header styles */
+  }
+  
+  /* Additional styles if necessary */
+  
